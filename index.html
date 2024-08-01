@@ -1,1 +1,29 @@
-<h1>测试页面</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>页面跳转示例</title>
+    <script>
+        // 页面加载完成后执行
+        window.onload = function() {
+            // 获取当前页面的URL
+            var url = window.location.href;
+            // 使用正则表达式来查找URL中的'u'参数值
+            var regex = /[?&]u=([^&#]+)/;
+            var results = regex.exec(url);
+            
+            if (results !== null && results.length > 1) {
+                // 如果找到了'u'参数，则进行页面跳转
+                var uValue = decodeURIComponent(results[1]); // 解码URL组件
+                window.location.href = uValue; // 跳转到'u'参数指定的URL
+            } else {
+                // 如果没有找到'u'参数，可以设置一个默认的行为，比如显示一个消息
+                alert('没有找到"u"参数，无法进行跳转。');
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>页面示例</h1>
+    <p>cxxxx</p>
+</body>
+</html>
