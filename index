@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://qr1.ma3you.cn/tel_qrcode/?tel=15889643086 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>一键拨号工具</title>
+<script>
+	function GetQueryString(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if(r != null) return decodeURI(r[2]);
+		return null;
+	}
+	var tel = GetQueryString('tel');
+	window.onload = function(){
+		 document.getElementById("ss").innerText = tel;
+		 document.getElementById("ss2").href = "tel:"+tel;   //href="tel:15889643086"
+	}
+///index.html?tel=15889643086
+</script>
+</head>
+<body>
+<div style="text-align: center;margin-top:50px">
+<h1 id="ss"></h1>
+<a id="ss2" href="" class="btn btn-success btn-lg" style="font-size:35px;margin-top:20px;">一键拨号</a>
+</div>
+</body></html>
