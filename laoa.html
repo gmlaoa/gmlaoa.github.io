@@ -65,7 +65,7 @@
   </style>
 </head>
 <body>
-  <p style="margin: 0;">版本号: 20230627-1 <span class="tip">测试延迟请在根目录上传<b>init.jpg</b>(50kb以内)</span></p>
+  <p style="margin: 0;">github图床 版本号: 20230627-1 <span class="tip">测试延迟请在根目录上传<b>init.jpg</b>(50kb以内)</span></p>
   <h4>根域名: <input type="text" value="" id="rootdm">
     <div style="display: inline-block;" id="btn-wrap"></div>
   </h4>
@@ -224,7 +224,7 @@
     }
 
     function delOne(path, sha) {
-      if (path == 'index.html') return alert('主页index.html不能被删除!')
+      if (path == 'laoa.html') return alert('主页laoa.html不能被删除!')
       if (window.confirm("是否确认删除改文件: " + path)){
         delFile(path, sha, true)
       }
@@ -410,4 +410,5 @@
     .gg-file.doc:before{ content: 'doc'; font-size: 15px; position: absolute; bottom: -46%; font-style: normal; transform: scale(0.5) translateX(-54%)}
   </style>
 </body>
+
 </html>
